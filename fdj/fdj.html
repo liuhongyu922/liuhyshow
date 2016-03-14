@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style>
+*{margin: 0;padding: 0;}
+#s,#b{float:left; margin-right:50px; width:350px; height:350px; position:relative; left:0; top:0;}
+#s{background: url(images/s.jpg) no-repeat;}
+#m{width:100px; height: 100px; background: #369; position:absolute; top:0; left:0; opacity: 0.3; filter:alpha(opacity:30); display: none;}
+#b{overflow: hidden; display: none;}
+#b img{position:absolute; top:0; left:0;}
+</style>
+<script src="js/bigMirror.js"></script>
+<script>
+
+window.onload=function(){
+	//传的是ID 第一个ID是小图 第二个ID是大图  第三个ID是小图中的选框 
+	new BigMirror({
+		sName:'s',
+		bName:'b',
+		mName:'m'
+	});
+};
+</script>
+</head>
+<body>
+	<div id="s">
+		<div id="m"></div>
+	</div>
+	<div id="b">
+		<img src="images/b.jpg" />
+	</div>
+</body>
+</html>
